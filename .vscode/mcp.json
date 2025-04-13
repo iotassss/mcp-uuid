@@ -1,0 +1,32 @@
+{
+    // 💡 Inputs are prompted on first server start, then stored securely by VS Code.
+    "inputs": [
+        // {
+        //     "type": "promptString",
+        //     "id": "github-token",
+        //     "description": "Github Access Token",
+        //     "password": true
+        // },
+    ],
+    "servers": {
+        "ServerFilesystem": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "/Users/iota/Workspace/tmp/sandbox"
+            ]
+        },
+        "ServerUUID": {
+            "type": "stdio",
+            "command": "npm",
+            "args": [
+                "--prefix",
+                "/Users/iota/Workspace/tmp/sandbox",
+                "run",
+                "dev"
+            ]
+        },
+    }
+}

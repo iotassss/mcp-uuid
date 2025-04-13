@@ -1,0 +1,27 @@
+{
+  "name": "simple-filesystem",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "uuid-server.ts",
+  "bin": {
+    "simple-filesystem": "./uuid-server.ts"
+  },
+  "scripts": {
+    "start:uuid-server": "ts-node uuid-server.ts",
+    "build": "tsc && chmod 755 uuid-server.ts",
+    "dev": "node --loader ts-node/esm uuid-server.ts"
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
